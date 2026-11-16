@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Archi Pastelería & Panadería</title>
+  <link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="complete.css">
+</head>
+<body>
+
+<main class="app">
+
+  <!-- PANTALLA DE CARGA -->
+  <section id="splash" class="view splash-view active">
+    <div class="splash-shape splash-shape-one"></div>
+    <div class="splash-shape splash-shape-two"></div>
+
+    <div class="splash-content">
+      <img class="splash-logo" src="img/logo.png" alt="Archi Pastelería y Panadería">
+
+      <div class="loading-track" aria-hidden="true">
+        <div class="loading-progress"></div>
+      </div>
+
+      <p class="loading-text">cargando...</p>
+    </div>
+
+    <img class="splash-croissant" src="img/croissant.png" alt="">
+    <img class="splash-cupcake" src="img/cupcake.png" alt="">
+  </section>
+
+  <!-- LOGIN -->
+  <section id="login" class="view login-view">
+    <div class="login-layout">
+
+      <div class="login-art">
+        <img class="login-art-logo" src="img/logo.png" alt="Archi Pastelería y Panadería">
+        <h1>Un mundo más dulce<br>te espera <span>♥</span></h1>
+
+        <div class="login-food-row">
+          <img src="img/croissant.png" alt="Croissant">
+          <img src="img/cupcake.png" alt="Cupcake">
+        </div>
+      </div>
+
+      <div class="login-panel">
+        <div class="mobile-brand">
+          <img src="img/logo.png" alt="Archi">
+          <p>Un mundo más dulce te espera <span>♥</span></p>
+        </div>
+
+        <h2>Iniciar sesión</h2>
+        <p class="login-help">Ingresa a tu cuenta para guardar tus pedidos.</p>
+
+        <form id="loginForm">
+          <label class="field-label" for="username">Correo electrónico</label>
+          <div class="field-row">
+            <span class="field-icon">👤</span>
+            <input id="username" type="email" required autocomplete="username" placeholder="tu@correo.com">
+          </div>
+
+          <label class="field-label" for="password">Contraseña</label>
+          <div class="field-row">
+            <span class="field-icon">🔒</span>
+            <input id="password" type="password" required minlength="10" autocomplete="current-password" placeholder="contraseña">
+            <button id="togglePassword" class="eye-button" type="button" aria-label="Mostrar contraseña">👁</button>
+          </div>
+
+          <button class="login-button" type="submit">Iniciar sesión</button>
+
+          <p id="loginMessage" class="login-message" role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="access-options"><button type="button" id="register">Crear cuenta</button><button type="button" id="recover">Recuperar contraseña</button><button type="button" id="demo">Explorar demostración</button><button type="button" id="demoAdmin">Ver administrador de demostración</button></div><p id="connection" class="login-help"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- INICIO -->
+  <section id="home" class="view home-view">
+
+    <header class="site-header">
+      <div class="header-inner">
+        <button id="menuBtn" class="hamburger" type="button" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+
+        <img class="site-logo" src="img/logo.png" alt="Archi Pastelería y Panadería">
+
+        <div class="header-actions">
+          <button id="favoriteHeader" class="header-icon" type="button" aria-label="Favoritos">♡</button>
+          <button id="cartHeader" class="header-icon cart-header" type="button" aria-label="Carrito">
+            🛒
+            <span id="cartBadge" class="badge">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <div class="page-content">
+
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">ARCHI PASTELERÍA & PANADERÍA</p>
+          <h1>Momentos más<br>dulces con <span>Archi</span></h1>
+          <p>Pasteles, panes y postres preparados para cada ocasión.</p>
+          <button id="heroProducts" class="primary-button" type="button">Ver productos</button>
+        </div>
+
+        <div class="hero-media">
+          <img src="img/banner_torta.png" alt="Torta de chocolate con fresas">
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Explora</p>
+            <h2>Categorías</h2>
+          </div>
+          <button id="allCategories" class="link-button" type="button">Ver todas →</button>
+        </div>
+
+        <div class="category-grid">
+          <button class="category-card" data-category="Pasteles" type="button">
+            <img src="img/cat_pasteles.png" alt="Pasteles">
+            <span>Pasteles</span>
+          </button>
+          <button class="category-card" data-category="Panes" type="button">
+            <img src="img/cat_panes.png" alt="Panes">
+            <span>Panes</span>
+          </button>
+          <button class="category-card" data-category="Postres" type="button">
+            <img src="img/cat_postres.png" alt="Postres">
+            <span>Postres</span>
+          </button>
+          <button class="category-card" data-category="Galletas" type="button">
+            <img src="img/cat_galletas.png" alt="Galletas">
+            <span>Galletas</span>
+          </button>
+          <button class="category-card" data-category="Bebidas" type="button">
+            <img src="img/cat_bebidas.png" alt="Bebidas">
+            <span>Bebidas</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="bread-promo bread-promo-transparent">
+        <img src="img/pan_fresco_transparente.png"
+             alt="Pan fresco todos los días - variedad de panes artesanales">
+      </section>
+
+      <section class="content-section">
+        <div class="section-title-row">
+          <div>
+            <p class="eyebrow">Para ti</p>
+            <h2>Recomendados</h2>
+          </div>
+          <button id="allProducts" class="link-button" type="button">Ver todo →</button>
+        </div>
+
+        <div class="products-grid">
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img src="img/torta_chocolate.png" alt="Torta de Chocolate">
+              <button class="favorite-button" data-product="Torta de Chocolate" type="button" aria-label="Agregar Torta de Chocolate a favoritos">♡</button>
+            </div>
+            <h3>Torta de Chocolate</h3>
+            <p class="product-price">S/60.00</p>
+            <p class="stars">★ ★ ★ ★ ☆</p>
+            <button class="add-cart" data-product="Torta de Chocolate" type="button">Agregar al carrito</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img src="img/torta_fresa.png" alt="Torta de Fresa">
+              <button class="favorite-button" data-product="Torta de Fresa" type="button" aria-label="Agregar Torta de Fresa a favoritos">♡</button>
+            </div>
+            <h3>Torta de Fresa</h3>
+            <p class="product-price">S/65.00</p>
+            <p class="stars">★ ★ ★ ★ ☆</p>
+            <button class="add-cart" data-product="Torta de Fresa" type="button">Agregar al carrito</button>
+          </article>
+
+          <article class="product-card">
+            <div class="product-image-wrap">
+              <img src="img/pan_integral.png" alt="Pan Integral">
+              <button class="favorite-button" data-product="Pan Integral" type="button" aria-label="Agregar Pan Integral a favoritos">♡</button>
+            </div>
+            <h3>Pan Integral</h3>
+            <p class="product-price">S/2.50</p>
+            <p class="stars">★ ★ ★ ★ ☆</p>
+            <button class="add-cart" data-product="Pan Integral" type="button">Agregar al carrito</button>
+          </article>
+        </div>
+      </section>
+
+    </div>
+
+    <nav class="mobile-nav mobile-nav-image" aria-label="Navegación móvil">
+      <img src="img/barra_navegacion_archi.png"
+           alt="Barra de navegación Archi">
+
+      <button class="mobile-nav-hotspot nav-hotspot-home" data-page="Inicio" type="button" aria-label="Inicio"></button>
+      <button class="mobile-nav-hotspot nav-hotspot-products" data-page="Productos" type="button" aria-label="Productos"></button>
+      <button class="mobile-nav-hotspot nav-hotspot-favorites" data-page="Favoritos" type="button" aria-label="Favoritos"></button>
+      <button class="mobile-nav-hotspot nav-hotspot-profile" data-page="Perfil" type="button" aria-label="Perfil"></button>
+    </nav>
+
+  </section>
+
+  <section id="workspace" class="view"></section>
+  <!-- MENÚ -->
+  <div id="menuOverlay" class="menu-overlay" aria-hidden="true">
+    <aside class="side-menu">
+      <div class="menu-top">
+        <img src="img/logo.png" alt="Archi">
+        <button id="closeMenu" class="close-menu" type="button" aria-label="Cerrar menú">×</button>
+      </div>
+
+      <div class="user-card">
+        <div class="user-avatar">N</div>
+        <div>
+          <strong>Hola, nicky</strong>
+          <span>Usuario Archi</span>
+        </div>
+      </div>
+
+      <button class="menu-item active" data-menu="Inicio" type="button"><span>⌂</span>Inicio <b>›</b></button>
+      <button class="menu-item" data-menu="Productos" type="button"><span>▦</span>Productos <b>›</b></button>
+
+      <button id="categoryToggle" class="menu-item" type="button"><span>🧁</span>Categorías <b id="categoryArrow">⌃</b></button>
+      <div id="menuCategories" class="menu-categories">
+        <button data-menu="Pasteles" type="button">🍰 Pasteles</button>
+        <button data-menu="Panes" type="button">🥐 Panes</button>
+        <button data-menu="Postres" type="button">🧁 Postres</button>
+        <button data-menu="Galletas" type="button">🍪 Galletas</button>
+        <button data-menu="Bebidas" type="button">🥤 Bebidas</button>
+      </div>
+
+      <button class="menu-item" data-menu="Mis pedidos" type="button"><span>📦</span>Mis pedidos <b>›</b></button>
+      <button class="menu-item" data-menu="Favoritos" type="button"><span>♡</span>Favoritos <b>›</b></button>
+      <button class="menu-item" data-menu="Carrito" type="button"><span>🛒</span>Carrito <b>›</b></button>
+      <button class="menu-item" data-menu="Perfil" type="button"><span>♙</span>Perfil <b>›</b></button>
+
+      <div class="menu-separator"></div>
+      <button class="logout-button" data-menu="Cerrar sesión" type="button">↪ Cerrar sesión</button>
+    </aside>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+</main>
+
+<script src="config.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="script.js"></script>
+<script src="complete.js"></script>
+</body>
+</html>
